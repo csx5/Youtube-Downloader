@@ -32,4 +32,4 @@ Installation & Usage
 To use this tool, you need Python and `pytube` installed. Then run:
 
 ```bash
-python yt_downloader.py
+python YoutubeDownloader.py
