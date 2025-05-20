@@ -7,6 +7,13 @@ def print_banner():
     print("     YouTube Downloader")
     print("==============================\n")
 
+def clean_url(url):
+    if "?" in url:
+        url = url.split("?")[0]
+    if "&" in url:
+        url = url.split("&")[0]
+    return url
+
 def show_video_info(yt):
     print("\n--- Video Information ---")
     print(f"Title      : {yt.title}")
@@ -60,7 +67,8 @@ def start_downloader():
             print("Goodbye!")
             sys.exit()
         try:
-            yt = YouTube(url, on_progress_callback=on_progress)
+            clean = clean_url(url)
+            yt = YouTube(clean, on_progress_callback=on_progress)
             download_menu(yt)
         except Exception as e:
             print(f"Error: {e}")
