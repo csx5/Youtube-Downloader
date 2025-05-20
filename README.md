@@ -29,7 +29,7 @@ If you do not agree with these terms, **do not use this software**.
 
 Installation & Usage
 
-To use this tool, you need Python and `pytube` installed. Then run:
+To use this tool, you need Python `pytube` and `colorama` installed. Then run:
 
 ```bash
 python YoutubeDownloader.py
